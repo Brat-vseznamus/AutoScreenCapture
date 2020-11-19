@@ -69,6 +69,7 @@ public class HistoryScanner
                     diff = getDifferenceImage(lastScreanCapture, capture);
                     if (diff >= 4) {
                         try {
+                            System.out.println("New screenshot was taken!");
                             File outputfile = new File("saved" + i +".jpg");
                             ImageIO.write((RenderedImage) capture, "jpg", outputfile);
                             i++;
@@ -83,7 +84,7 @@ public class HistoryScanner
                 try {
                     // Thread.currentThread();
                 } catch (Exception e) {}
-                System.out.println("new["+ i +"], difference = " + diff + "%");
+                // System.out.println("new["+ i +"], difference = " + diff + "%");
             }
         };
         Timer timer = new Timer("MyTimer");
