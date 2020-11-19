@@ -70,7 +70,7 @@ public class HistoryScanner
                     if (diff >= 4) {
                         try {
                             System.out.println("New screenshot was taken!");
-                            File outputfile = new File("saved" + i +".jpg");
+                            File outputfile = new File("photos/photo" + i +".jpg");
                             ImageIO.write((RenderedImage) capture, "jpg", outputfile);
                             i++;
                         } catch (IOException e1) {
